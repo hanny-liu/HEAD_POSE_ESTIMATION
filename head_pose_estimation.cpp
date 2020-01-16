@@ -170,7 +170,7 @@ int main() {
     if (!cap.isOpened()) {
         cout << "no video!" << endl;
     }
-    
+
     //4.define face detection
     dlib::frontal_face_detector detector = dlib::get_frontal_face_detector();
     dlib::shape_predictor pose_model;
