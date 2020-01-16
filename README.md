@@ -2,17 +2,15 @@
 driver's head pose estimation
 # 驾驶员头部姿态说明文档
 ## 驾驶员头部姿态估计算法说明
-驾驶员头部姿态估计主要分为驾驶员头部关键点提取，驾驶员头部姿态估计，驾驶员头部3d显示。如下图所示：
+驾驶员头部姿态估计主要分为驾驶员头部关键点提取，驾驶员头部姿态估计，驾驶员头部3d显示。如下图所示：  
+![headpose flow](https://github.com/hanny-liu/HEAD_POSE_ESTIMATION/blob/master/flow.png "流程图")
 1. 驾驶员头部关键点提取  
 主要利用dlib库的检测器和训练模型提取人脸68个关键点
 2. 驾驶员头部姿态估计  
 主要利用2d-2d的对极几何的估计相机相邻两帧的变换情况
 3. 驾驶员人脸3d显示  
 使用PCL库中3d点云三维显示.
-
-
-
-##依赖库安装  
+## 依赖库安装  
 主要需要下载pcl,opencv4.,dlib.
 1. 安装dlib库：  
 ```  
@@ -40,10 +38,7 @@ make -j4
 sudo make install  
 ```  
 然后再使用release模式运行程序，程序就能加速运行  
-
-
-
-##驾驶员头部姿态估计代码说明
+## 驾驶员头部姿态估计代码说明
 1. 读入3d人脸数据与处理  
 * 读取标准人脸3d特征点：  
 `Void ReadGeneralFaceShapePoints(const std::string filename, std::vector<double>& general_face_shape_points);`  
