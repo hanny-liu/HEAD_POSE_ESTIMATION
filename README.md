@@ -2,23 +2,28 @@
 driver's head pose estimation
 # 驾驶员头部姿态说明文档
 1. 驾驶员头部姿态估计算法说明
-	驾驶员头部姿态估计主要分为驾驶员头部关键点提取，驾驶员头部姿态估计，驾驶员头部3d显示。如下图所示：
-
-
+   驾驶员头部姿态估计主要分为驾驶员头部关键点提取，驾驶员头部姿态估计，驾驶员头部3d显示。如下图所示：
+	
+	
+	
 1. 驾驶员头部关键点提取
 主要利用dlib库的检测器和训练模型提取人脸68个关键点
 2. 驾驶员头部姿态估计
 主要利用2d-2d的对极几何的估计相机相邻两帧的变换情况
 3. 驾驶员人脸3d显示
 使用PCL库中3d点云三维显示。
-二 依赖库安装
-	主要需要下载pcl,opencv4.,dlib.
-	1.安装dlib库：
+2. 依赖库安装
+   主要需要下载pcl,opencv4.,dlib.
+   
+   
+   1.安装dlib库：
+   (```)
 	cd dlib
-mkdir build
-cmake .. -DUSE_AVX_INSTRUCTION=ON -DUSE_SSE4_INSTRUCTIONS=ON
-cmake --build . --config Release --target install
-sudo make install
+	mkdir build
+	cmake .. -DUSE_AVX_INSTRUCTION=ON -DUSE_SSE4_INSTRUCTIONS=ON
+	cmake --build . --config Release --target install
+	sudo make install
+   (```)
 2.安装pcl库：
 sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
 sudo apt-get update
