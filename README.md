@@ -8,7 +8,7 @@ driver's head pose estimation
 2. 驾驶员头部姿态估计  
 主要利用2d-2d的对极几何的估计相机相邻两帧的变换情况
 3. 驾驶员人脸3d显示  
-使用PCL库中3d点云三维显示。
+使用PCL库中3d点云三维显示.  
 ##依赖库安装
 主要需要下载pcl,opencv4.,dlib.
 1. 安装dlib库：  
@@ -30,7 +30,7 @@ https://opencv.org/releases/
 cmake ..  
 make -j4  
 sudo make install  
-然后再使用release模式运行程序，程序就能加速运行
+然后再使用release模式运行程序，程序就能加速运行  
 ##驾驶员头部姿态估计代码说明
 1. 读入3d人脸数据与处理  
 * 读取标准人脸3d特征点：  
