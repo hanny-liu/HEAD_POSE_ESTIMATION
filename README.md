@@ -80,3 +80,12 @@ void ClearPointCloud()：清除点云中的点。
 显示类viewer，构造函数需要其传入点云变量，以初始化显示类的成员变量。  
 void AddPointCloud()：添加点云  
 void UpdatePointCloud(int second)：更新点云，传入停留点云的秒数。
+## 文件说明
+3DMM(1-31).txt是前31个3d关键点的index  
+3DMM_keypoints_index.txt是68个3d关键点的index  
+shapeMU.txt是用3dmm生成的随机人脸3d点  
+shape_predictor_68_face_landmarks.dat是人脸关键点提取的训练模型  
+head_pose_estimation.cpp头部姿态估计的源文件  
+head_pose_estimation.h头部姿态估计的头文件
+---
+此代码是本人学习复现的代码,欢迎各位提出改进的idea.
