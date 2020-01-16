@@ -3,9 +3,12 @@ driver's head pose estimation
 # 驾驶员头部姿态说明文档
 ## 驾驶员头部姿态估计算法说明
 驾驶员头部姿态估计主要分为驾驶员头部关键点提取，驾驶员头部姿态估计，驾驶员头部3d显示。如下图所示：  
-![headpose flow](https://github.com/hanny-liu/HEAD_POSE_ESTIMATION/blob/master/flow.png "流程图")
+![headpose flow](https://github.com/hanny-liu/HEAD_POSE_ESTIMATION/blob/master/flow.png "流程图")  
+0. 标准人脸关键点提取  
+主要是通过3DMM模型生成的随机人脸数据点,利用前31个固定关键点进行相邻帧的位姿估计.  
+没有完全使用68个点的原因在于如果使用所有68个点会因为表情变化对位姿估计不准确,且本算法没有使用face alignment,所以只用了前31个固定点.  
 1. 驾驶员头部关键点提取  
-主要利用dlib库的检测器和训练模型提取人脸68个关键点
+主要利用dlib库的检测器和训练模型提取人脸68个关键点.  
 2. 驾驶员头部姿态估计  
 主要利用2d-2d的对极几何的估计相机相邻两帧的变换情况
 3. 驾驶员人脸3d显示  
